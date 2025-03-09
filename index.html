@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Table</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="custom-table">
+      <div class="container">
+        <div class="table-container">
+          <div class="table-header">
+            <div>
+              <h2>Keyword Data</h2>
+            </div>
+
+            <div class="top-boxes">
+              <!-- Custom SeLect Box  -->
+              <div class="select-box">
+                <!-- Label forId and input ID will be same -->
+                <div class="select-box__current" tabindex="1">
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="0"
+                      value="1"
+                      name="Ben"
+                      checked="checked"
+                    />
+                    <p class="select-box__input-text">Semrush</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="1"
+                      value="2"
+                      name="Ben"
+                    />
+                    <p class="select-box__input-text">Semrush 2</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="2"
+                      value="3"
+                      name="Ben"
+                    />
+                    <p class="select-box__input-text">Semrush 3</p>
+                  </div>
+                  <div class="select-box__value">
+                    <input
+                      class="select-box__input"
+                      type="radio"
+                      id="mezbah"
+                      value="3"
+                      name="Ben"
+                    />
+                    <p class="select-box__input-text">Mezbah</p>
+                  </div>
+                  <img
+                    class="select-box__icon"
+                    src="./utils/images/arrow.svg"
+                    alt="Arrow Icon"
+                    aria-hidden="true"
+                  />
+                </div>
+                <!-- All Options  -->
+                <ul class="select-box__list">
+                  <li>
+                    <label
+                      class="select-box__option"
+                      for="0"
+                      aria-hidden="aria-hidden"
+                      >Semrush</label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      class="select-box__option"
+                      for="1"
+                      aria-hidden="aria-hidden"
+                      >Semrush 2</label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      class="select-box__option"
+                      for="2"
+                      aria-hidden="aria-hidden"
+                      >Semrush 3</label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      class="select-box__option"
+                      for="mezbah"
+                      aria-hidden="aria-hidden"
+                      >Mezbah</label
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Country Selection Button -->
+              <div class="table-country-selector" onclick="openModal()">
+                <span class="selected-flag">🏳️‍⚧️</span>
+                <span class="selected-country">US</span>
+                <span class="arrow"
+                  ><img
+                    src="./utils/images/arrow.svg"
+                    alt="Arrow Icon"
+                    aria-hidden="true"
+                /></span>
+              </div>
+              <input
+                type="text"
+                id="search"
+                class="search-box"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th style="display: flex; align-items: center; gap: 10px">
+                  <input type="checkbox" class="selector-btn" /> Keyword
+                </th>
+                <th>Intent</th>
+                <th>Volume</th>
+                <th>KD %</th>
+                <th>CPC (USD)</th>
+                <th>Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="keyword-container">
+                    <input type="checkbox" class="selector-btn" />
+                    <span>semrush</span>
+                    <button class="show-btn">Show</button>
+                  </div>
+                </td>
+                <td data-label="Intent">N</td>
+                <td data-label="Volume">33,100</td>
+                <td data-label="KD %">
+                  <span class="badge badge-red">87</span>
+                </td>
+                <td data-label="CPC (USD)">$3.46</td>
+                <td data-label="Updated">Last week</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="keyword-container">
+                    <input type="checkbox" class="selector-btn" />
+                    <span>semrush login</span>
+                    <button class="show-btn">Show</button>
+                  </div>
+                </td>
+                <td data-label="Intent">N T</td>
+                <td data-label="Volume">1,600</td>
+                <td data-label="KD %">
+                  <span class="badge badge-yellow">47</span>
+                </td>
+                <td data-label="CPC (USD)">$2.81</td>
+                <td data-label="Updated">Last week</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="keyword-container">
+                    <input type="checkbox" class="selector-btn" />
+                    <span>semrush pricing</span>
+                    <button class="show-btn">Show</button>
+                  </div>
+                </td>
+                <td data-label="Intent">N T</td>
+                <td data-label="Volume">1,300</td>
+                <td data-label="KD %">
+                  <span class="badge badge-green">44</span>
+                </td>
+                <td data-label="CPC (USD)">$4.68</td>
+                <td data-label="Updated">Last week</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="keyword-container">
+                    <input type="checkbox" class="selector-btn" />
+                    <span>Mezbah Uddin</span>
+                    <button class="show-btn">Show</button>
+                  </div>
+                </td>
+                <td data-label="Intent">DD</td>
+                <td data-label="Volume">1,300</td>
+                <td data-label="KD %">
+                  <span class="badge badge-green">44</span>
+                </td>
+                <td data-label="CPC (USD)">$4.68</td>
+                <td data-label="Updated">Last week</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <ul class="pagination">
+              <li><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+              <li><a href="#">1</a></li>
+              <li class="active"><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Country Modal -->
+    <div class="custom-table">
+      <div id="country-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+          <h2>Select Country</h2>
+          <input type="text" id="search-box" placeholder="Search country" />
+          <ul class="country-list" id="country-list"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./utils/js/jquery.min.js"></script>
+    <script src="./utils/js/table-country-select.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Search functionality
+        $("#search").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("table tbody tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+
+        // Show details button for mobile
+        $(".show-btn").on("click", function () {
+          var row = $(this).closest("tr");
+          row.toggleClass("active");
+          $(this).text(row.hasClass("active") ? "Hide" : "Show");
+        });
+      });
+    </script>
+  </body>
+</html>
